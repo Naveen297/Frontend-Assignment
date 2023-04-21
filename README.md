@@ -1,6 +1,7 @@
 Dynamic UI Form Generator
 This project is a React application that generates forms dynamically from a JSON object. It uses the React JSON Schema Form library to generate the form based on the JSON object.
 
+use Pizza.json and employee.json file code to run the editor and to generate the form.
 Getting Started
 To get started with this project, follow the steps below:
 
