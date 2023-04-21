@@ -52,7 +52,7 @@ function App() {
               Rendered Form
             </h2>
             <p className="text-xs text-red-400 flex justify-center items-center mb-3">
-              Output for your JSON object
+              Output for your JSON
             </p>
             <FormRenderer schema={schema} />
           </div>
