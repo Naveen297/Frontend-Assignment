@@ -1,27 +1,4 @@
-// // src/FormRenderer.js
-// import React from "react";
-// import { withTheme } from "@rjsf/core";
-// import { Theme as DefaultTheme } from "@rjsf/bootstrap-4";
-// import Ajv from "ajv";
-// import "./FormRenderer.css";
-
-// const ajv = new Ajv({ allErrors: true, verbose: true });
-
-// const Form = withTheme(DefaultTheme);
-
-// const FormRenderer = ({ schema }) => {
-//   return (
-//     <div style={{ height: "100vh", overflowY: "scroll" }}>
-//       <div className="form-container">
-//         <Form schema={schema} validator={ajv} />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FormRenderer;
-// src/FormRenderer.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { withTheme } from "@rjsf/core";
 import { Theme as DefaultTheme } from "@rjsf/bootstrap-4";
 import Ajv from "ajv";
@@ -32,8 +9,13 @@ const ajv = new Ajv({ allErrors: true, verbose: true });
 const Form = withTheme(DefaultTheme);
 
 const FormRenderer = ({ schema }) => {
+  //   const [formData, setFormData] = useState({});
   const [formData, setFormData] = useState({});
+  const [showSubmitButton, setShowSubmitButton] = useState(false);
 
+  useEffect(() => {
+    setShowSubmitButton(!!Object.keys(schema).length);
+  }, [schema]);
   const handleOnChange = ({ formData }) => {
     setFormData(formData);
   };
@@ -49,10 +31,6 @@ const FormRenderer = ({ schema }) => {
     );
   }
 
-  // Implement other rules and descriptions here
-  // Note that the current UI code doesn't support all the features described
-  // You may need to create custom components or extend the @rjsf/bootstrap-4 theme to support them
-
   return (
     <div style={{ height: "100vh", overflowY: "scroll" }}>
       <div className="form-container">
@@ -61,6 +39,9 @@ const FormRenderer = ({ schema }) => {
           formData={formData}
           onChange={handleOnChange}
           validator={ajv}
+          noHtml5Validate={true}
+          showErrorList={false}
+          submitButton={showSubmitButton} // Set the visibility of the submit button
         />
       </div>
     </div>

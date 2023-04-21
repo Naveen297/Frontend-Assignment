@@ -10,9 +10,7 @@ const JsonEditor = ({ onChange }) => {
     try {
       const parsedJson = JSON.parse(newValue);
       onChange(parsedJson);
-    } catch (error) {
-      // Invalid JSON, you can handle the error or ignore it
-    }
+    } catch (error) {}
   };
 
   return (
