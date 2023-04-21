@@ -1,0 +1,92 @@
+{
+  "title": "Pizza Order",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Pizza Name"
+    },
+    "pizza_type": {
+      "type": "object",
+      "title": "Pizza Type",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "Pizza Type",
+          "enum": ["naples", "newyork"],
+          "enumNames": ["Naples Style Pizza", "New York Style Pizza"],
+          "default": "naples"
+        },
+        "Naples": {
+          "type": "object",
+          "title": "Naples Style Pizza",
+          "properties": {
+            "slices": {
+              "type": "string",
+              "title": "Slices",
+              "enum": ["1", "2", "3", "4", "5"],
+              "default": "1"
+            },
+            "type": {
+              "type": "string",
+              "title": "Type",
+              "pattern": "naples"
+            }
+          }
+        },
+        "NewYork": {
+          "type": "object",
+          "title": "New York Style Pizza",
+          "properties": {
+            "cheeseburst": {
+              "type": "boolean",
+              "title": "Cheeseburst",
+              "default": false
+            },
+            "type": {
+              "type": "string",
+              "title": "Type",
+              "pattern": "newyork"
+            }
+          }
+        }
+      }
+    },
+    "toppings": {
+      "type": "object",
+      "title": "Toppings",
+      "properties": {
+        "sauce": {
+          "type": "string",
+          "title": "Sauce",
+          "enum": ["Red", "White", "Pesto"],
+          "default": "Red"
+        },
+        "main_topping": {
+          "type": "string",
+          "title": "Main Topping",
+          "enum": ["Mushroom", "Chicken", "Jalapenos"],
+          "default": "Mushroom"
+        },
+        "include_seasonings": {
+          "type": "boolean",
+          "title": "Include Seasonings",
+          "default": true
+        },
+        "second_topping": {
+          "type": "string",
+          "title": "Second Topping",
+          "enum": ["Anchovies", "Pineapple", "Potatoes"],
+          "default": "Anchovies"
+        }
+      }
+    },
+    "size": {
+      "type": "string",
+      "title": "Size",
+      "enum": ["Medium", "Small", "Large"],
+      "default": "Medium"
+    }
+  },
+  "required": ["name", "pizza_type", "toppings"]
+}

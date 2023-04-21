@@ -1,0 +1,97 @@
+{
+  "title": "Employee Registration",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Full Name"
+    },
+    "email": {
+      "type": "string",
+      "title": "Email",
+      "format": "email"
+    },
+    "phone": {
+      "type": "string",
+      "title": "Phone",
+      "pattern": "^[0-9]{10}$"
+    },
+    "address": {
+      "type": "string",
+      "title": "Address"
+    },
+    "department": {
+      "type": "string",
+      "title": "Department",
+      "enum": ["Sales", "Marketing", "Engineering", "Human Resources"],
+      "default": "Sales"
+    },
+    "skills": {
+      "type": "array",
+      "title": "Skills",
+      "items": {
+        "type": "string",
+        "enum": ["JavaScript", "Python", "Java", "Ruby", "C++", "Swift", "PHP"]
+      },
+      "uniqueItems": true
+    },
+    "permissions": {
+      "type": "object",
+      "title": "Permissions",
+      "properties": {
+        "admin": {
+          "type": "boolean",
+          "title": "Admin",
+          "default": false
+        },
+        "read_only": {
+          "type": "boolean",
+          "title": "Read Only",
+          "default": false
+        }
+      }
+    },
+    "gender": {
+      "type": "string",
+      "title": "Gender",
+      "enum": ["Male", "Female", "Other"],
+      "default": "Male"
+    },
+    "marital_status": {
+      "type": "string",
+      "title": "Marital Status",
+      "enum": ["Single", "Married"],
+      "default": "Single"
+    },
+    "emergency_contact": {
+      "type": "object",
+      "title": "Emergency Contact",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Full Name"
+        },
+        "relationship": {
+          "type": "string",
+          "title": "Relationship"
+        },
+        "phone": {
+          "type": "string",
+          "title": "Phone",
+          "pattern": "^[0-9]{10}$"
+        }
+      }
+    },
+    "agree_terms": {
+      "type": "boolean",
+      "title": "I agree to the terms and conditions"
+    },
+    "preferred_language": {
+      "type": "string",
+      "title": "Preferred Language",
+      "enum": ["English", "Spanish", "French"],
+      "default": "English"
+    }
+  },
+  "required": ["name", "email", "phone", "address", "department", "agree_terms"]
+}
