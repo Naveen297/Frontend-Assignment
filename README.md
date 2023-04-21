@@ -8,7 +8,7 @@ To get started with this project, follow the steps below:
 Clone the repository to your local machine.
 Install the project dependencies by running npm install in the terminal.
 Start the development server by running npm start in the terminal.
-Once you have done this, you can start working on the project. The application should be available at http://localhost:3000 in your web browser.
+Once you have done this, you can start working on the project. The application should be available at json2form.netlify.app in your web browser.
 
 Usage
 To use the Dynamic UI Form Generator, you need to provide a JSON object that describes the form. This JSON object should conform to the JSON Schema specification.
