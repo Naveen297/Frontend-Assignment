@@ -10,7 +10,7 @@ To run the app locally, follow these steps:
 
 Clone the repository to your local machine:
 
-git clone https://github.com/<your-username>/json-to-form-renderer.git
+gh repo clone Naveen297/Frontend-Assignment
 
 Install the dependencies:
 
@@ -24,6 +24,8 @@ Open your browser and navigate to http://localhost:3000 to access the app.
 Usage
 
 Once the app is running, you can generate a form by providing a JSON schema. The schema should be in the following format:
+
+you can copy the json object from pizza.json and employee.json to run the code.
 
 {
   "title": "Employee Registration",
