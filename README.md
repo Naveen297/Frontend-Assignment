@@ -26,7 +26,7 @@ Usage
 Once the app is running, you can generate a form by providing a JSON schema. The schema should be in the following format:
 
 you can copy the json object from pizza.json and employee.json to run the code.
-
+///
 {
   "title": "Employee Registration",
   "type": "object",
@@ -124,7 +124,7 @@ you can copy the json object from pizza.json and employee.json to run the code.
   },
   "required": ["name", "email", "phone", "address", "department", "agree_terms"]
 }
-
+///
 To generate a form, enter the schema in the input box on the home page and form will be automaticaly be generated.
 
 Once the form is rendered, you can fill in the fields and click the "Submit" button. The entered data will be displayed on a review page.
