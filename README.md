@@ -1,32 +1,30 @@
-JSON to Form Renderer
+# JSON TO HTML FORM
+JSON to Form Renderer is a React-based web application that allows users to generate forms dynamically from a given JSON schema. Users can fill in the generated form, and the entered data is then displayed on a review page.
 
-This project is a simple React-based web application that allows users to generate forms dynamically from a given JSON schema. Users can fill in the generated form, and the entered data is then displayed on a review page.
+The app is hosted on Netlify and can be accessed at https://json2form.netlify.app/
 
-The app is hosted on Netlify and can be accessed at https://json2form.netlify.app/.
+To run the app locally, you can follow these steps:
 
-Running the App Locally
+1. Clone the repository to your local machine using the following command:
+   
+   		`gh repo clone Naveen297/Frontend-Assignment`
 
-To run the app locally, follow these steps:
+Github repo link:  https://github.com/Naveen297/Frontend-Assignment.git
+   
+2. Install the dependencies by running the following command:
 
-Clone the repository to your local machine:
+  		 `npm install`
+   
+3. Start the development server:
 
-gh repo clone Naveen297/Frontend-Assignment
+  		 `npm start`
+   
+4. Open your browser and navigate to http://localhost:3000 to access the app.
 
-Install the dependencies:
+Once the app is running, you can generate a form by providing a JSON schema. The schema should be in a specific format, which can be copied from the examples provided in the app. Once the schema is entered, the form will be generated automatically. After filling in the form fields, you can submit the form and see the entered data on a review page.
 
-npm install
-
-Start the development server:
-
-npm start
-
-Open your browser and navigate to http://localhost:3000 to access the app.
-Usage
-
-Once the app is running, you can generate a form by providing a JSON schema. The schema should be in the following format:
-
-you can copy the json object from pizza.json and employee.json to run the code.
-
+Example Schema:
+```
 {
   "title": "Employee Registration",
   "type": "object",
@@ -124,12 +122,9 @@ you can copy the json object from pizza.json and employee.json to run the code.
   },
   "required": ["name", "email", "phone", "address", "department", "agree_terms"]
 }
+```
 
-To generate a form, enter the schema in the input box on the home page and form will be automaticaly be generated.
-
-Once the form is rendered, you can fill in the fields and click the "Submit" button. The entered data will be displayed on a review page.
-
-Technologies Used
+The app uses the following technologies:
 
 1. React
 2. @rjsf/core (React JSON Schema Form)
@@ -137,3 +132,4 @@ Technologies Used
 4. Ajv (JSON schema validator)
 5. Netlify (for hosting the app)
 
+In summary, JSON to Form Renderer is a simple yet powerful tool that can help you generate forms quickly and easily from a given JSON schema.
