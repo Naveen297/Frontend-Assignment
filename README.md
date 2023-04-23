@@ -123,7 +123,7 @@ Example Schema:
   "required": ["name", "email", "phone", "address", "department", "agree_terms"]
 }
 ```
-##Code Explaination
+## Code Explaination
 ### File Name: App.js
 ```
 1. This is a React functional component named `App`.
